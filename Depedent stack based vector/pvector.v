@@ -104,14 +104,14 @@ Notation "[ x ]" := (state__vec x) (at level 91, left associativity).
 Notation "f |> x" := (apply f x) (at level 91, right associativity).
 Notation "f |>> x" := (map f x) (at level 91, right associativity).
 
-Fixpoint map1 {T B C' K Y'}  (d' : T -> T) (p' : Vec T B Y' (Surely C') K) (p : nat) :=
+(*Fixpoint map1 {T B C' K Y'}  (d' : T -> T) (p' : Vec T B Y' (Surely C') K) (p : nat) :=
    match p with
         | S n => match p' with
                      |vec_head A (Cons X Y) B D  => (map1 d' (>> (vec_head T A (Cons T X Y) B D)) n)
-                     |_ => vec_head T B Y'
+                     |_ => Y'
                   end
-        | 0 => vec_head T B (None T)
-      end.
+        | 0 => Y'
+      end. *)
 
 (*Definition map1' {T B C' K Y_ S} (p' : Vec T B (Cons T Y_ S) (Surely C') K) (d' : T -> T) (p : nat) := 
   (fun (d => vec_head T B (head__vec d) (surely_state__vec d) (back__vec d)) (map1 d' p' p). *)
