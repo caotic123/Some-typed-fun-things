@@ -8,7 +8,7 @@ Inductive t A : nat -> Type :=
   |cons : forall (h:A) (n:nat), t A n -> t A (S n).
 ```
 This code purpose this definition :
-```
+```coq
 Inductive Vec (A : Type) : nat -> vec_list A -> Some A -> vec_list A -> Type :=
 | vec_head : forall (index : nat) (lis : vec_list A) (v : A) (lis_ : vec_list A),
                   Vec A (S (plus (vec_list_length lis) (vec_list_length lis_))) lis (Surely v) lis_
