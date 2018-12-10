@@ -9,10 +9,10 @@ Inductive t A : nat -> Type :=
 ```
 This code purpose this definition :
 ```coq
-Inductive Vec (A : Type) : nat -> vec_list A -> Some A -> vec_list A -> Type :=
-| vec_head : forall (index : nat) (lis : vec_list A) (v : A) (lis_ : vec_list A),
-                  Vec A (S (plus (vec_list_length lis) (vec_list_length lis_))) lis (Surely v) lis_
-| vec_empty : Vec A 0 (None A) Nothing (None A).
+Inductive Vector (A : Type) : nat -> Type :=
+ |Indexed_Vector : forall (lis : vec_list A) (v : A) (lis_ : vec_list A),
+                  Vector A (S (plus (vec_list_length lis) (vec_list_length lis_)))
+ |Empyty_Vector : Vector A 0.
 ```
 That's guarantees O(m+n), where m = stack index position and n = index you to want, so walking in a vector is always O(n).
 
