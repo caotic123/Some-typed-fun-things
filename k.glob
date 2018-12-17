@@ -1,0 +1,9 @@
+DIGEST 4698c6f80b163fa12bc74f4bd40d8317
+Fk
+prf 8:15 <> n_more_0
+R31:33 Coq.Init.Datatypes <> nat ind
+R37:37 Coq.Init.Logic <> :type_scope:x_'='_x not
+R46:49 Coq.Init.Logic <> :type_scope:x_'='_x not
+R38:41 Coq.Init.Peano <> plus def
+R45:45 k <> a var
+R50:50 k <> a var

@@ -1,0 +1,38 @@
+DIGEST 8a7316da81e1c3624d3aaa161eab6426
+Flambda
+R15:20 Coq.QArith.QArith <> <> lib
+R38:55 Coq.Setoids.Setoid <> <> lib
+ind 70:75 <> option
+constr 93:96 <> Some
+constr 116:119 <> None
+R105:110 lambda <> option ind
+R123:128 lambda <> option ind
+ind 144:146 <> Nat
+constr 159:165 <> NonZero
+constr 182:185 <> Zero
+R176:178 lambda <> Nat ind
+R169:171 lambda <> Nat ind
+R189:191 lambda <> Nat ind
+def 206:217 <> isHigherZero
+R224:226 lambda <> Nat ind
+R231:234 Coq.Init.Datatypes <> bool ind
+R247:247 lambda <> n var
+R260:266 lambda <> NonZero constr
+R273:276 Coq.Init.Datatypes <> true constr
+R284:287 lambda <> Zero constr
+R292:296 Coq.Init.Datatypes <> false constr
+def 317:319 <> ret
+R337:337 lambda <> A var
+R343:343 lambda <> x var
+prf 355:367 <> forward_small
+R406:406 lambda <> B var
+R400:400 lambda <> B var
+R397:397 lambda <> A var
+R391:391 lambda <> A var
+prf 572:591 <> everything_is_itself
+R606:609 Coq.Init.Datatypes <> bool ind
+R626:629 Coq.Init.Datatypes <> bool ind
+R618:620 Coq.Init.Logic <> :type_scope:x_'='_x not
+R612:615 Coq.Init.Datatypes <> negb def
+R617:617 lambda <> x var
+R621:621 lambda <> x var
