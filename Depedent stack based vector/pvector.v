@@ -315,31 +315,11 @@ Compute (fun y => mapLeftshifiting y) (shiftLeft_Vector ((([] :: nat) -: 2) : 4 
 
 (*Compute walk_towards (add_vec_ele ([]::nat) 2).*)
 
-  Definition foo (P : nat -> Prop) (H0 : P 0) (HS : forall n, P (S n)) (x : nat) : P x :=
-   match x with
-   | 0 => H0
-   | S n => HS n
-   end.
-
-(*Fixpoint map1 {T B C' K Y' e} (d' : T -> T) (p' : Vec T B (Cons T e Y') (Surely C') K) :=
-  (map1 d' (match (>> p') with
-                  |vec_head A' (Cons X' Y') B'' D' => vec_head T A' (Cons T X' Y') B'' D'
-                  |_ => vec_head T (S (plus (vec_list_length (Cons T e Y')) (vec_list_length K))) (Cons T e Y') C' K
-            end)). *)
-(*Definition map1' {T B C' K Y_ S} (p' : Vec T B (Cons T Y_ S) (Surely C') K) (d' : T -> T) (p : nat) := 
-  (fun (d => vec_head T B (head__vec d) (surely_state__vec d) (back__vec d)) (map1 d' p' p). *)
-
 Definition vectorEmpty_is0 {T} (P: Vec T 0 (None T) Nothing (None T) -> Type) (____:P (vec_empty T)) ___p :P ___p :=
 match ___p with
   |vec_empty => ____
   |_ => fun z => False_ind (Evil) z 
 end.
-
-Definition pu {T B} (t : Vector T B) := 
-  match t with
-    |Indexed_Vector t' d' f' => 1
-    |Empyty_Vector => 0
-  end.
 
 Compute [(([] :: nat) -: 2)].
 (*Compute map1 (fun d => d) (<< (([] :: 1) : 2 : 3)) 100. *)
